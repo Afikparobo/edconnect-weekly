@@ -13,81 +13,47 @@
 <main>
     <h1>Signup</h1>
     <form>	
-        <table>		
-              <tr>			
-                  <td>				
-                      First Name:			
-                  </td>			
-                   <td>				
-                      <input Type="text" Name="firstName">			
-                   </td>		
-              </tr>
-               <tr>
-                    <td>				
-                      Last Name:			
-                    </td>			
-                    <td>				
-                     <input Type="text" Name="lastName">			
-                    </td>		
-              </tr>
-               <tr>
-                   <td>
-                     Email address:
-                   </td>
-                   <td>
-                     <input Type="email" Name="email">
-                   </td>
-               </tr>	
-                <tr>
-                    <td>				
-                      Password:			
-                    </td>			
-                    <td>				
-                      <input Type="password" Name="password">			
-                    </td>
-                </tr>
-                 <tr>
-                     <td>
-                       Matric Number:
-                     </td>
-                     <td>
-                       <input Type="text" Name="matricNumber">
-                     </td>
-                 </tr>
-                  <tr>
-                      <td>
-                        Program:
-                     </td>
-                     <td>
-                        <select Name= "program:">
-                        <option value = "computer_science">Computer Science</option>
-                        <option value = "computer_information_system">Computer Information System</option>
-                        <option value = "computer_technology">Computer Technology</option>
-                        </select>
-                     </td>
-                  </tr>
-                  <tr>
-                      <td>
-                          Graduation Year:
-                      </td>
-                      <td>          
-                         <select Name="graduation Year:">
-                         <option value="2013">2013</option>
-                         <option value="2014">2014</option>
-                         <option value="2015">2015</option>
-                         <option value="2016">2016</option>
-                         <option value="2017">2017</option>
-                         <option value="2018">2018</option>
-                         <option value="2019">2019</option>
-                         <option value="2020">2020</option>
-                         </select>
-                      </td>   
-                  </tr>
-                  <tr>
-                      <td>
-                         <input Type="submit"/>
-                      </td>
-                  </tr>	 
-        </table>
-   </form> 
+          <label for="firstname">First Name:</label>			
+      		<input Type="text" Name="firstName"/><br>			
+    </form>
+    <form>			
+          <label for="lastname">Last Name:</label>       		
+          <input Type="text" Name="lastName"/><br>			
+    </form>
+    <form>
+          <label for="emailaddress">Email Address:</label> 
+          <input Type="email" Name="email"><br>
+    </form>				
+    <form> 
+          <label for="password">Password:</label>            		
+          <input Type="password" Name="password"><br>
+    </form>			
+    <form>
+          <label for="matricnumber">Matric Number:</label>         
+          <input Type="text" Name="matricNumber"><br>
+    </form>
+    <form>
+          <label for="program">Program:</label>
+          <select Name= "program" id="program">
+          <option value = "computer_science">Computer Science</option>
+          <option value = "computer_information_system">Computer Information System</option>
+          <option value = "computer_technology">Computer Technology</option>
+          </select>
+    </form>
+    <form>
+          <label for="graduationyear">Graduation Year:</label>
+          <select Name="graduation year" id="graduation year">
+          <option value="2013">2013</option>
+          <option value="2014">2014</option>
+          <option value="2015">2015</option>
+          <option value="2016">2016</option>
+          <option value="2017">2017</option>
+          <option value="2018">2018</option>
+          <option value="2019">2019</option>
+          <option value="2020">2020</option>
+          </select>
+    </form>
+    <form>
+          <input Type="submit"/><br>
+    </form> 
 </main>   
