@@ -3,71 +3,109 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
-    <link rel="stylesheet"><link href="css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="css/bootstrap.min.css"> 
   </head>
   
   <body>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="#">Navbar</a>
+    <nav class="navbar navbar-expand-md navbar-dark static-top bg-primary">
+      <a class="navbar-brand">Project Explorer</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-1" type="text" placeholder="Search Projects" aria-label="Search">
+        <button class="btn btn-outline-light my-2 mr-sm-2" type="submit">Search</button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="createproject.html">Submit</a>
+            </li>
+          </ul>
+        </div>      
+      </form>
   
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="register.html">Sign up</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Projects</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="login.html">Login</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Login</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Register</a>
-          </li>  
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search Projects" aria-label="Search">
-            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-          </form>
-        </div>
-      </nav>
+        </ul>
+      </div>
+    </nav>
     
-      <main role="main">
-    <h1>Project Explorer</h1>
-    <h2>One Stop Database for Academic Projects</h2>
-</header>
-<main>
-    <p>This application allows you to explore various academic projects. You can search, upload and browse projects</p>
-<header>
-    <h1> Project List</h1>
-</header>
-   <body>
-       <h1>Project 1</h1>
-       <ul>
-           <li>Name: Project 1</li>
-           <li>Description: Lorem ipsum dolorsit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-           <li>Program: Computer Science</li>
-           <li>2018</li>
-       </ul>
-       <h2>Project 2</h2>
-       <ul>
-           <li>Name: Project 2</li>
-           <li>Description: Lorem ipsum dolorsit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-           <li>Program: Computer Science</li>
-           <li>2019</li>
-       </ul>
-       <h3>Project 3</h3>
-       <ul>
-           <li>Name: Project 3</li>
-           <li>Description: Lorem ipsum dolorsit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-           <li>Program: Computer Science</li>
-           <li>2020</li>
-       </ul>
-   </body>
-</main>   
+  <main role="main">
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3">Welcome to Project Explorer</h1>
+          <p>Project Explorer is a respository for final year projects across all departments at your institution. You can submit your project and search projects submitted by others to learn from.</p>
+          <p>
+            <a class="btn btn-primary btn-lg" href="register.html" role="button">Get Started &raquo;</a>
+            <a class="btn btn-secondary btn-lg" href="login.html" role="button">Login &raquo;</a>
+          </p>  
+        </div>
+      </div>
+      
+      <!-- card starts here-->
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="project1">Project 1</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Author 1, Author 2</h6>
+          <p class="card-text">Description: Lorem ipsum dolorsit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <a href="#" class="card-link">#html</a>
+          <a href="#" class="card-link">#css</a>
+          <a href="#" class="card-link">#javascript</a>
+        </div>
+      </div>
+    </div>  
+    <div class="col-md-3">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="project2">Project 2</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Author 1, Author 2</h6>
+          <p class="card-text">Description: Lorem ipsum dolorsit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <a href="#" class="card-link">#html</a>
+          <a href="#" class="card-link">#css</a>
+          <a href="#" class="card-link">#javascript</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="project3">Project 3</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Author 1, Author 2</h6>
+          <p class="card-text">Description: Lorem ipsum dolorsit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <a href="#" class="card-link">#html</a>
+          <a href="#" class="card-link">#css</a>
+          <a href="#" class="card-link">#javascript</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="project3">Project 4</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Author 1, Author 2</h6>
+          <p class="card-text">Description: Lorem ipsum dolorsit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <a href="#" class="card-link">#html</a>
+          <a href="#" class="card-link">#css</a>
+          <a href="#" class="card-link">#javascript</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>        
+  </main> 
+
+  <footer class="container-fluid text-right">
+    <p class="mt-5 mb-3 text-muted">Project Explorer &copy; 2020 - <strong>Edconnect</strong> </p>
+  </footer>
+  </body>
+</html>  
+  

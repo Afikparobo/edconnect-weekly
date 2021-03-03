@@ -1,55 +1,147 @@
-<header>
-    <h1>Project Explorer</h1>
-    <h2>One Stop Database for Academic Projects</h2>
-</header>
-<nav>
-    
-    <a href="index.html"> Home</a>
-    <a href="search.html"> Projects</a>
-    <a href="login.html"> Login</a>
-    <a href="register.html"> Register</a>
-    
-</nav>
-<main>
-    <h1>Project 1</h1>
-    <ul>
-        <li>Created by: Jane Doe</li>
-        <li>Date Created: 00/00/0000</li>
-        <li>Last Updated: 01/01/0001</li>
-    </ul>
-    
-    <h1>Edit Project</h1>
-    <form>	
-          <label for="projectname">Project Name:</label>
-    </form>
-    <form>				
-          <input Type="text" Name="name">			
-    </form>
-    <form>
-          <label for="projectabstract">Project Abstract</label>
-    </form>
-    <form>				
-          <textarea Type="text" Name="abstract"></textarea>			
-    </form>
-    <form>
-          <label for="authors">Authors:</label>
-    </form>
-    <form>
-          <input Type="text" Name="authors">
-    </form>
-    <form>
-          <label for="tag(s)">Tag(s):</label>
-    </form>
-    <form>
-          <input Type="text" Name="tags">
-    </form>
-    <form>
-          <label for="uploadfile">Upload File</label>
-    </form>
-    <form>
-          <input Type="file" Name="projectFile">
-    </form>
-    <form>
-          <input Type="submit">
-    </form>
-</main>   
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
+    <link rel="stylesheet" href="css/bootstrap.min.css"> 
+  </head>
+  
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark static-top bg-primary">
+      <a class="navbar-brand">Project Explorer</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-1" type="text" placeholder="Search Projects" aria-label="Search">
+        <button class="btn btn-outline-light my-2 mr-sm-2" type="submit">Search</button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="createproject.html">Submit</a>
+            </li>
+          </ul>
+        </div>      
+      </form>
+  
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="register.html">Sign up</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+  <br>
+  <div class="container">
+     <h2>Project 1</h2>
+     <div class="form-row">
+        <div class="col">
+          <div class="form-group">
+            <label class="form-label">Created By</label>
+            <p>Ade Chris</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label class="form-label">Date Created</label>
+            <p>2020-08-30</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label class="form-label">Last Updated</label>
+            <p>2020-08-30</p>
+          </div>
+        </div>  
+        <div class="col">
+          <div class="form-group">
+            <div class="d-flex justify-content-end">
+              <button type="submit" class="btn btn-primary">View Project</button>
+            </div>  
+          </div>
+        </div>
+     </div>
+     <br>
+     <div class="form-row">
+       <div class="col">
+         <div class="form-group">
+            <label class="form-label"><strong>Edit Project</strong></label> 
+         </div>
+       </div>
+       <div class="col">
+          <div class="form-group">
+            <label class="form-label"><strong>Manage Project files</strong></label>
+          </div>
+       </div>
+     </div> 
+     <div class="form-row">
+        <div class="col">
+          <div class="form-group">
+            <label class="form-label">Project name</label>    
+            <input type="text" class="form-control" Name="project1" placeholder="Project 1">
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="customFile">
+              <label class="custom-file-label" for="customFile">Click to open file browser</label>
+            </div>
+          </div>
+        </div>
+     </div> 
+     <div class="form-row">
+       <div class="col">
+         <div class="form-group">
+            <label class="form-label">Project abstract</label>    
+            <textarea type="text" class="form-control" Name="abstract" placeholder="Project 1 is a very interesting project"></textarea>
+         </div>
+       </div>
+       <div class="col">
+        <div class="form-group">
+          <div class="card">
+            <div class="card-header">
+              <strong>Project files</strong>
+            </div>
+            <div class="card-body">
+              <p class="text-center">No file uploaded yet</p>
+            </div>
+          </div>
+        </div>
+       </div>
+     </div>    
+     <div class="form-row">
+       <div class="col-md-6">
+          <div class="form-group">
+            <label class="form-label">Author(s)</label>    
+            <input type="text" class="form-control" Name="Author(s)" placeholder="Ade Chris"><br>
+          </div>
+       </div>
+     </div>
+     <div class="form-row">
+       <div class="col-md-6">
+         <div class="form-group">
+           <label class="form-label">Tag(s)</label>    
+           <input type="text" class="form-control" Name="Tag(s)" placeholder="#web"><br>
+         </div>
+       </div>
+     </div>
+     <button type="submit" class="btn btn-primary">Save</button>
+     <footer class="container-fluid text-right">
+      <div class="fixed-bottom">
+        <p class="mt-5 mb-3 text-muted">Project Explorer &copy; 2020 - <strong>Edconnect</strong> </p>
+     </footer>
+  </div>
+  </body>
+</html>       
+                    
+
+
+                  
+
+

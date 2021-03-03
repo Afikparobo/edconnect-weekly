@@ -1,27 +1,63 @@
-<header>
-    <h1>Project Explorer</h1>
-    <h2>One Stop Database for Academic Projects</h2>
-</header>
-<nav>
-    
-    <a href="index.html"> Home</a>
-    <a href="search.html"> Projects</a>
-    <a href="login.html"> Login</a>
-    <a href="register.html"> Register</a>
-    
-</nav>
-<main>
-    <h1>Login</h1>
-    <form>				
-          <label for="emailaddress">Email Address:</label>			
-		  <input type="email" name="email" id="emailaddress"/><br>							
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
+    <link rel="stylesheet" href="css/bootstrap.min.css"> 
+  </head>
+  
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark static-top bg-primary">
+      <a class="navbar-brand">Project Explorer</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-1" type="text" placeholder="Search Projects" aria-label="Search">
+        <button class="btn btn-outline-light my-2 mr-sm-2" type="submit">Search</button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="createproject.html">Submit</a>
+            </li>
+          </ul>
+        </div>      
+      </form>
+  
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="register.html">Sign up</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  
+  <div class="navbar navbar-default navbar-static-top">
+    <form class="mx-auto">
+      <br>
+      <h1>Login</h1>
+      <div class="form-group">
+        <div class="container">
+          <label for="inputEmailaddress">Email address</label>
+          <input type="email" class="form-control" id="inputEmail" placeholder="Enter email">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="container">
+          <label for="inputPassword">Password</label>
+          <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Login</button>
+  
+  <footer class="container-fluid text-right">
+    <div class="fixed-bottom">
+       <p class="mt-5 mb-3 text-muted">Project Explorer &copy; 2020 - <strong>Edconnect</strong> </p>
+  </footer>
+  </div>
     </form>
-    <form>     
-          <label for="password">Password:</label>			
-    	  <input type="password" name="password" id="password"/><br>
-    </form>
-    <form>     			
-          <input Type="submit"/>
-    </form> 
-
-</main>   
+</html>   

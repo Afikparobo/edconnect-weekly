@@ -1,44 +1,103 @@
-<header>
-    <h1>Project Explorer</h1>
-    <h2>One Stop Database for Academic Projects</h2>
-</header>
-<nav>
-    
-    <a href="index.html"> Home</a>
-    <a href="search.html"> Projects</a>
-    <a href="login.html"> Login</a>
-    <a href="register.html"> Register</a>
-    
-</nav>
-<main>
-    <h2>Search Project By</h2>
-    <form>
-          <input Type="text" Name="searchTerm" Placeholder="Project Name, Authors, Abstract, Tags">
-    </form>
-    <form>
-          <label for="searchby">Search By:</label>
-    </form>
-    <form>
-          <select Name="searchType" id="search Type">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
+    <link rel="stylesheet" href="css/bootstrap.min.css"> 
+  </head>
+  
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark static-top bg-primary">
+      <a class="navbar-brand">Project Explorer</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-1" type="text" placeholder="Search Projects" aria-label="Search">
+        <button class="btn btn-outline-light my-2 mr-sm-2" type="submit">Search</button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="createproject.html">Submit</a>
+            </li>
+          </ul>
+        </div>      
+      </form>
+  
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="register.html">Sign up</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  
+  <div class="container">
+    <br>   
+    <h2 ><strong>Project Gallery</strong></h2>
+    <div class="container bg-light p-3">
+    <form >
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <div class="form-group">
+          <input type="searhby" class="form-control" Name="search by" placeholder="Search project name, authors, abstract, tags">
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="form-group">
+          <label class="form-label form-control">Search by</label>    
+        </div>
+      </div>
+      <div class="col-md-2">   
+        <div class="form-group">
+          <select class="form-control">
           <option value="Name">Name</option>
           <option value="Abstract">Abstract</option>
           <option value="Authors">Authors</option>
           <option value="Tags">Tags</option>
-          </select>         
-    </form>
-    <form>
-          <input Type="submit" Value="Search">
-    </form>
-    <h1>Search Result</h1>
-    <div>
-        <h3>Project 1</h3>
-        <ul>
-            <li>Name: Project 1</li>
-            <li>Description: Description: Lorem ipsum dolorsit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-            <li>Program: Computer Science</li>
-            <li>Authors: John Doe, Jane Doe</li>
-            <li>Tags: #Asphyxia, #GSW</li>
-            <li>Year:2018</li>
-        </ul>
+          </select> 
+        </div>  
+      </div>
+      <div class="col">   
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>    
     </div>
-</main>   
+    </form>
+    </div>    
+    <p><strong>All Projects</strong> (0 results)</p>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="project1">Project 1</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Author 1, Author 2</h6>
+        <p class="card-text">Description: Lorem ipsum dolorsit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <a href="#" class="card-link">#html  #css</a>
+        <a href="#" class="card-link">#javascript</a>
+      </div>
+    </div>
+  </div>  
+  <div class="col-md-4">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="project2">Project 2</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Author 1, Author 2</h6>
+        <p class="card-text">Description: Lorem ipsum dolorsit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <a href="#" class="card-link">#html  #css</a>
+        <a href="#" class="card-link">#javascript</a>
+      </div>
+    </div>
+  </div>
+  <footer class="container-fluid text-right">
+    <div class="fixed-bottom">
+       <p class="mt-5 mb-3 text-muted">Project Explorer &copy; 2020 - <strong>Edconnect</strong> </p>
+    </div>   
+  </footer>
+</html>
