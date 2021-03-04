@@ -13,7 +13,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <form class="form-inline my-2 my-lg-0">
-        <input name="name"  class="form-control mr-sm-1" type="text" placeholder="Search Projects" value="Search Projects" aria-label="searchForm">
+        <input class="form-control mr-sm-1" name="name" type="text" placeholder="Search Projects" value="Search Projects" aria-label="searchForm">
         <button class="btn btn-outline-light my-2 mr-sm-2" type="submit">Search</button>
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
           <ul class="navbar-nav mr-auto">
@@ -37,8 +37,8 @@
     </nav>
 
    <br>
-   <div class="container">
-     <h2>Project 1</h2>
+   <div class="container"><h3>Project 1</h3></div>
+     <div class="container bg-light p-3">
      <div class="form-row">
         <div class="col">
           <div class="form-group">
@@ -66,7 +66,9 @@
           </div>
         </div>
      </div>
-     <br>
+     </div> 
+   <div class="container">
+    <form class="form-group" name="editProject">  
      <div class="form-row">
        <div class="col">
          <div class="form-group">
@@ -83,13 +85,13 @@
         <div class="col">
           <div class="form-group">
             <label class="form-label">Project name</label>    
-            <input class="form-control" type="text" name="name">
+            <input class="form-control" type="text" name="name" placeholder="Project 1">
           </div>
         </div>
         <div class="col">
           <div class="form-group">
             <div class="custom-file">
-              <input type="file" class="custom-file-input" id="customFile">
+              <input class="custom-file-input" type="file" id="customFile">
               <label class="custom-file-label" for="customFile">Click to open file browser</label>
             </div>
           </div>
@@ -99,7 +101,7 @@
        <div class="col">
          <div class="form-group">
            <label class="form-label">Project abstract</label>    
-           <textarea type="text" class="form-control" Name="abstract" placeholder="Project 1 is a very interesting project"></textarea>
+           <textarea class="form-control" type="text" name="abstract" placeholder="Project 1 is a very interesting project"></textarea>
          </div>
        </div>
        <div class="col">
@@ -118,8 +120,8 @@
      <div class="form-row">
        <div class="col-md-6">
           <div class="form-group">
-            <label class="form-label">Authors</label>    
-            <input name="authors" class="form-control" type="text">
+            <label class="form-label">Author(s)</label>    
+            <input class="form-control" type="text" name="authors" placeholder="Ade Chris">
           </div>
        </div>
      </div>
@@ -127,17 +129,18 @@
        <div class="col-md-6">
          <div class="form-group">
            <label class="form-label">Tag(s)</label>    
-           <input class="form-control" type="text" name="tags"><br>
+           <input class="form-control" type="text" name="tags" placeholder="#web"><br>
          </div>
        </div>
      </div>
-     <button type="submit" class="btn btn-primary">Save</button>
-     <footer class="container-fluid text-right">
+     <button class="btn btn-primary" type="submit">Save</button>
+    </form> 
+    <footer class="container-fluid text-right">
       <div class="fixed-bottom">
         <p class="mt-5 mb-3 text-muted">Project Explorer &copy; 2020 - <strong>Edconnect</strong>  </p>
       </div>  
      </footer>
-  </div>
+   </div>
   </body>
 </html>       
                     
