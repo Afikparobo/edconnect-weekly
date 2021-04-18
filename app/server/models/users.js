@@ -20,50 +20,46 @@ class User {
 
 class Users extends DataModel {
     authenticate(email, password) {
-        let user = this.data.find((item) => item.email === email && item.password === password);
-        return (user ? true : false)
+        let valUser = this.data.find(item => item.email === email && item.password === password);
+        return (valUser ? true : false);
 
     }
 
     getByEmail(email) {
-   let user = this.data.find((item) => item.email === email);
-    return (user ? user : null)
+   let user = this.data.find(obj =>{
+        return obj.email === email;
+    });
+    return (user ? user : null);
 
     }
 
     getByMatricNumber(matricNumber) {
-let user = this.data.find((item) => item.matricNumber === matricNumber);
+let user = this.data.find(item => { 
+        return item.matricNumber === matricNumber;
+    });
     return (user ? user : null)
 
     }
 
     validate(obj) {
-let value = true;
-for (const item in obj) {
-    if (obj[item] === null  || obj[item] === undefined){
-        value =false;
+let value = true
+for(const prop in obj){
+    if(obj[prop] === undefined || obj[prop] === null){
+        value = false;
     }
-  }
+}
+let valEmail = this.data.find(item => item.email === obj.email);
+let valMatric = this.data.find(item => item.matricNumber === obj.matricNumber);
+let passCheck = obj.password.length >= 7 ? true : false;
 
-  let checkEmail = this.data.find((item) => item.email === obj.email);
-  let checkMatric = this.data.find((item) => item.matricNumber === obj.matricNumber);
-  let passCheck = obj.password.length >= 7 ?  true : false;
-
-//   if (passCheck === true && value === true) {
-//     if (checkEmail === false || checkEmail === undefined) {
-//         if (checkMatric == false || checkMatric == undefined) {
-//             return true;
-//         }
-//     }
-// }
-// return false;
-
-
-  if (value && checkEmail && checkMatric && passCheck){
-      return true
-  }
-
-  return false  
+   if (passCheck === true && value === true) {
+     if (valEmail === false || valEmail === undefined) {
+         if (valMatric == false || valMatric == undefined) {
+             return true;
+            }
+        }
+    }
+    return false; 
 
     }
 }

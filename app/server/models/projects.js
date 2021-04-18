@@ -19,17 +19,17 @@ let checkTags = Array.isArray(obj.tags);
 
 let value = true;
 for (const item in obj) {
-    if (obj[item] === null  || obj[item] === undefined){
+    if (!obj[item]  || obj[item] === null){
         value =false;
     }
-  }
+}
 
 
   if (value && checkAuthors && checkTags){
     return true
-}
+  }
 
-return false 
+   return false 
     }
 }
 
