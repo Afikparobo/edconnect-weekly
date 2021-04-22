@@ -13,49 +13,38 @@ class Project {
 
 class Projects extends DataModel {
     validate(obj) {
-        this.errors = [];
-        let msg;
-        let isEmpty; 
-        let checkAuthors = Array.isArray(obj.authors); 
-        let checkTags = Array.isArray(obj.tags);
+        //Check if Authors is array 
+        let checkAuthor = Array.isArray(obj.authors)
+        checkAuthor ? true : this.errors.push("Authors should be an array")
 
-        for (const x in obj){
-            if (Object.hasOwnProperty.call(obj, x)){
-                const item = obj[x];
-                if (item == ""){
-                    isEmpty = true;
-                    msg = x + " should not be empty"
-                    this.errors.push(msg)
-                }
+        //Check if Tag is array
+        let checkTags = Array.isArray(obj.tags)
+        checkTags ? true : this.errors.push("Tags should be an array")
+
+        //Check for empty values
+        let value = true;
+        for (const key in obj){
+            if (!obj [key] || obj[key] === null || obj[key] === undefined || obj[key] === ""){
+                value = false;
+                this.errors.push("should not be empty")
+                break;
             }
         }
-
-        for (let index = 0; index < this.data.length; index++){
-            const item = this.data[index];
-
-            if (obj.authors == item.authors){
-                checkAuthors = true;
-                msg = "Authors should be an array";
-                this.errors.push(msg);
-            }
-        }
-        
-        for (let index = 0; index < this.data.length; index++){
-            const item = this.data[index];
-
-            if (obj.tags == item.tags){
-                checkTags = true;
-                msg = "Tags should be an array";
-                this.errors.push(msg);
-            }
-        }
-
-        if (isEmpty || checkAuthors || checkTags){
-            return true} else {
-                return false;
-        }
+        return (checkAuthor && checkTags && value) ? true : false
     }
-}
+}        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       
 
 //let checkAuthors = Array.isArray(obj.authors);
 //let checkTags = Array.isArray(obj.tags);
