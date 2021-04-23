@@ -14,8 +14,8 @@ class Project {
 class Projects extends DataModel {
     validate(obj) {
         //Check if Authors is array 
-        let checkAuthor = Array.isArray(obj.authors)
-        checkAuthor ? true : this.errors.push("Authors should be an array")
+        let checkAuthors = Array.isArray(obj.authors)
+        checkAuthors ? true : this.errors.push("Authors should be an array")
 
         //Check if Tag is array
         let checkTags = Array.isArray(obj.tags)
@@ -26,46 +26,13 @@ class Projects extends DataModel {
         for (const key in obj){
             if (!obj [key] || obj[key] === null || obj[key] === undefined || obj[key] === ""){
                 value = false;
-                this.errors.push("should not be empty")
+                this.errors.push((obj[key]) + "should not be empty")
                 break;
             }
         }
-        return (checkAuthor && checkTags && value) ? true : false
+        return (checkAuthors && checkTags && value) ? true : false
     }
 }        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-       
-
-//let checkAuthors = Array.isArray(obj.authors);
-//let checkTags = Array.isArray(obj.tags);
-
-//let value = true;
-//for (const item in obj) {
-    //if (!obj[item]  || obj[item] === null){
-        //value =false;
-    //}
-//}
-
-
-  //if (value && checkAuthors && checkTags){
-    //return true
-  //}
-
-   //return false 
-
-
-
-
 // Do not worry about the below for now; It is included so that we can test your code
 // We will cover module exports in later parts of this course
 module.exports = {
