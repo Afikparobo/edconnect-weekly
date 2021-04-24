@@ -13,26 +13,45 @@ class Project {
 
 class Projects extends DataModel {
     validate(obj) {
-        //Check if Authors is array 
-        let checkAuthors = Array.isArray(obj.authors)
-        checkAuthors ? true : this.errors.push("Authors should be an array")
-
-        //Check if Tag is array
-        let checkTags = Array.isArray(obj.tags)
-        checkTags ? true : this.errors.push("Tags should be an array")
-
-        //Check for empty values
-        let value = true;
-        for (const key in obj){
-            if (!obj [key] || obj[key] === null || obj[key] === undefined || obj[key] === ""){
-                value = false;
-                this.errors.push((obj[key]) + "should not be empty")
-                break;
+        this.errors = [];
+        for (let key in obj){
+            if (key == 'authors' && !Array.isArray(obj[key])){
+                this.errors.push(`${key} should be an array`);
+            }else if (key == 'tags' && !Array.isArray(obj[key])){
+                this.errors.push(`${key} should be an array`);
+            }else if (obj[key] == '' || obj[key] == [] || obj[key] == null){
+                if (key !== 'authors' && key !== 'tags'){
+                    this.errors.push(`${key} should not be empty`);
+                }
             }
         }
-        return (checkAuthors && checkTags && value) ? true : false
+        if(this.errors.length == 0){
+            return true;
+        }else{
+            return false;
+        }
+
+        //Check if Authors is array
+       // let checkAuthor = Array.isArray(obj.authors)
+       // checkAuthor ? true : this.errors.push("Authors should be an array")
+
+        //Check if Tag is array
+        //let checkTags = Array.isArray(obj.tags)
+        //checkTags ? true : this.errors.push("Tags should be an array")
+
+        //Check for empty values
+        //let value = true;
+        //for (const key in obj) {
+            //if (!obj[key] || obj[key] === null || obj[key] === undefined || obj[key] === "") {
+               // value = false;
+                //this.errors.push((obj[key]) + " should not be empty")
+                //break;
+            //}
+        //}
+        //return (checkAuthor && checkTags && value) ? true : false
     }
-}        
+}
+        
 // Do not worry about the below for now; It is included so that we can test your code
 // We will cover module exports in later parts of this course
 module.exports = {
