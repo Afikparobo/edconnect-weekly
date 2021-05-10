@@ -30,25 +30,6 @@ class Projects extends DataModel {
         }else{
             return false;
         }
-
-        //Check if Authors is array
-       // let checkAuthor = Array.isArray(obj.authors)
-       // checkAuthor ? true : this.errors.push("Authors should be an array")
-
-        //Check if Tag is array
-        //let checkTags = Array.isArray(obj.tags)
-        //checkTags ? true : this.errors.push("Tags should be an array")
-
-        //Check for empty values
-        //let value = true;
-        //for (const key in obj) {
-            //if (!obj[key] || obj[key] === null || obj[key] === undefined || obj[key] === "") {
-               // value = false;
-                //this.errors.push((obj[key]) + " should not be empty")
-                //break;
-            //}
-        //}
-        //return (checkAuthor && checkTags && value) ? true : false
     }
 }
         
