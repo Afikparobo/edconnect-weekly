@@ -90,24 +90,6 @@ let user = this.data.find(item => {
     }
 }
 
-//let value = true
-//for(const prop in obj){
-    //if(obj[prop] === undefined || obj[prop] === null){
-       // value = false;
-    //}
-//}
-//let valEmail = this.data.find(item => item.email === obj.email);
-//let valMatric = this.data.find(item => item.matricNumber === obj.matricNumber);
-//let passCheck = obj.password.length >= 7 ? true : false;
-
-   //if (passCheck === true && value === true) {
-     //if (valEmail === false || valEmail === undefined) {
-         //if (valMatric == false || valMatric == undefined) {
-             //return true;
-            //}
-        //}
-    //}
-    //return false;
 
 
 
