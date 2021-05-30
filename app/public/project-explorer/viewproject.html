@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
+    <link rel="stylesheet" href="css/bootstrap.min.css"> 
+  </head>
+  
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark static-top bg-primary">
+      <a class="navbar-brand">Project Explorer</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-1" type="text" placeholder="Search Projects" aria-label="Search">
+        <button class="btn btn-outline-light my-2 mr-sm-2" type="submit">Search</button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav">
+            <li><a class = 'nav-link' href='viewproject.html'>Projects</a></li>
+            <li><a class="nav-link" href="createproject.html">Submit</a></li>
+          </ul>
+        </div>      
+      </form>
+  
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item ">
+          <a class="nav-link" href="register.html" id="signup">Signup <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="login.html" id="login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="logout" style="display: none;" >Logout</a>
+            </li>
+            <li class="nav-item">
+            <span class="navbar-text" id="username" style="display: none;"></span>
+            </li>
+        </ul>
+      </div>
+    </nav>
+
+  <br>
+  <main class="project_info">
+  <div class="container mt-5">
+     <h2 id="project_name">Project 1</h2>
+     <div class="form-row">
+        <div class="col p-4 ml-3 bg-light">
+          <div class="form-group" id="project_author">
+            <label class="form-label">Created By</label>
+            <p>Ade Chris</p>
+          </div>
+        </div>
+        <div class="col p-4 ml-3 bg-light">
+          <div class="form-group" >
+            <label class="form-label">Date Created</label>
+            <p>2020-08-30</p>
+          </div>
+        </div>
+        <div class="col p-4 ml-3 bg-light">
+          <div class="form-group">
+            <label class="form-label">Last Updated</label>
+            <p>2020-08-30</p>
+          </div>
+        </div>  
+        <div class="col col p-4 bg-light">
+          <div class="form-group">
+            <div class="d-flex justify-content-end">
+              <a class="btn btn-primary" href="editproject.html" role="button">Edit Project</a>
+            </div>  
+          </div>
+        </div>
+     </div>
+     <br>
+     <div class="form-row">
+       <div class="col">
+         <div class="form-group">
+            <h3>Project Abstract</h3>
+            <hr style="width: 100%;">
+            <p id="project_abstract">Lorem ipsum dolorsit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dius aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulia pariatur. Excepteur sint occaecat cupidatat non proident, stunt in culpa qui officia desserunt molit anim id est laborum.</p> 
+         </div>
+       </div>
+       <div class="col">
+         <div class="form-group">
+           <h3>Project Details</h3>
+           <hr style="width: 100%;">    
+           <div class="card">
+             <div class="card-header">
+              <h5>Author(s)</h5>
+             </div>
+             <div class="card-body" id="project_authors">
+               <p>Ade Chris</p>
+               <div class="card-footer" id="project_tags">
+                <a href=editproject.html class="card-link text-primary">#web</a>
+               </div>
+             </div>
+           </div>
+           <div class="card">
+             <div class="card-header">
+              <h5>Project files</h5>
+             </div>
+             <div class="card-body">
+               <p class="text-center">No file uploaded yet</p>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+     <div class="form-row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="form-label"><strong>Comments</strong></label>
+            <textarea type="text" class="form-control" Name="abstract" placeholder="Leave a comment"></textarea>
+          </div>
+        </div>
+     </div> 
+     <button type="submit" class="btn btn-primary">Submit</button>
+     <div class="form-row">
+       <div class="col-md-6">
+         <div class="form-group">
+           <p class="card-text text-center">No comments added yet </p>
+         </div>
+       </div>
+     </div>     
+     <footer class="container-fluid text-right">
+        <p class="mt-5 mb-3 text-muted">Project Explorer &copy; 2020 - <strong>Edconnect</strong> </p>
+     </footer>
+  </div>
+  </main>
+  <script src="js/app.js"></script>
+  </body>
+</html>    
+        
+
+
