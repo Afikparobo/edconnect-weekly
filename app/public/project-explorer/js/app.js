@@ -123,14 +123,15 @@ const postLogin = async () => {
 
 // creating a project by a user
 
-if (path.includes("index.html")) {
-  window.onload = () => {
-    setLogin();
-  };
-}
+// if (path.includes("index.html")) {
+//   window.onload = () => {
+//     setLogin();
+//   };
+// }
 if (path.includes("createproject.html")) {
   window.onload = () => {
     const checkCookieVal = getCookie("uid");
+    console.log("jide")
 
     if (checkCookieVal === "") {
       window.location.href = "login.html";
@@ -142,6 +143,7 @@ if (path.includes("createproject.html")) {
 
   const createProject = async () => {
     const error_Alert = document.getElementById("errormsg");
+    console.log(error_Alert)
     error_Alert.style.display = "none";
     createProjectForm.addEventListener("submit", async (e) => {
       e.preventDefault();
@@ -238,11 +240,17 @@ if (window.location.href.includes('index.html')){
 }        
 
 
+ 
 
-  
+if (path.includes("viewproject.html")) {
+  window.onload = () => {
+          setLogin();
+          viewProject();
+    }
+  };
+
 let viewProject = function(){
   //step 10
- 
 
 const queryString = window.location.search; // retrive the website link
 const params = new URLSearchParams(queryString); 
