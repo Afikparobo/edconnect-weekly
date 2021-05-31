@@ -39,12 +39,10 @@ if (path.includes("register.html")) {
       throw new Error("HTTP Error Status: " + resp.status);
     } else {
       const years = await resp.json();
-      for (let i = 0; i < years.length; i++) {
-        const optElement = document.createElement("option");
-        optElement.value = years[i];
-        optElement.innerHTML = years[i];
-        graduationYear.append(optElement);
-      }
+      let result = years.map(year =>{
+        return `<option value="${year}">${year}</option>`
+      }).join("")
+      graduationYear.innerHTML = result;
     }
   };
 
@@ -59,13 +57,9 @@ if (path.includes("register.html")) {
       const lastName = signUpForm.querySelector("[name=lastName]").value;
       const email = signUpForm.querySelector("[name=email]").value;
       const password = signUpForm.querySelector("[name=password]").value;
-      const matricNumber = signUpForm.querySelector(
-        "[name=matricNumber]"
-      ).value;
+      const matricNumber = signUpForm.querySelector("[name=matricNumber]").value;
       const program = signUpForm.querySelector("[name=program]").value;
-      const graduationYear = signUpForm.querySelector(
-        "[name=graduationYear]"
-      ).value;
+      const graduationYear = signUpForm.querySelector("[name=graduationYear]").value;
       const userData = {
         firstname: firstName,
         lastname: lastName,
