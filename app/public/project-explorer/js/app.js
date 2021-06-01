@@ -255,6 +255,7 @@ const viewProject = function(){
       method: 'GET',
       headers: {
       'Content-Type': 'application/json',
+      
   }
   })
       .then(response => response.json())
