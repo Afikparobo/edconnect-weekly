@@ -243,17 +243,14 @@ if (window.location.href.includes('index.html')){
 if (path.includes("viewproject.html")) {
   window.onload = () => {
           setLogin();
-          // viewProject();
+          viewProject();
     }
   };
 
-let viewProject = function(){
+const viewProject = function(){
   //step 10
-
-const queryString = window.location.search; // retrive the website link
-const params = new URLSearchParams(queryString); 
-console.log(params)
-    let pId = params.get("id");
+    let params = new URLSearchParams(document.location.search.substring(1));
+        let pId = params.get("id");
     fetch(`/api/projects/${pId}`, { //Use the actual id for the GET method. 
       method: 'GET',
       headers: {
@@ -261,8 +258,8 @@ console.log(params)
   }
   })
       .then(response => response.json())
-      // console.log(response.json())
       .then(function(response) {
+        console.log(response)
         let projectName = response.name;
         document.getElementById("project_name").innerHTML = projectName;
         let projectAuthors = response.authors;
